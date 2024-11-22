@@ -1,0 +1,33 @@
+.features {
+  grid-row: 2/3;
+  grid-column: full-start/full-end;
+}
+.grid__feature {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(min-content, 6rem));
+  grid-template-columns: repeat(3, minmax(10rem, 33.3rem));
+  grid-gap: 6rem;
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+  justify-content: center;
+}
+
+.feature {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: min-content minmax(15rem, 27rem);
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+
+  &__icon {
+    height: 4.5rem;
+    width: 4.5rem;
+    fill: $color-primary;
+    transform: translateY(-1rem);
+  }
+  &__text {
+    grid-column: 2/3;
+    font-family: $font-primary;
+    font-size: 1.7rem;
+  }
+}
